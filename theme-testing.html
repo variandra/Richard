@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>
+       Testing javascript
+    </title>
+<script type="text/javascript">
+        function theme(newtheme){
+            document.getElementById("").style.backgroundColor = ""
+        }
+        function selectedtheme(){
+            newtheme = document.getElementById("themeselector").value;
+        }
+    
+    </script>
+</head>
+
+<body>
+<nav>
+    <div class="pig">
+        <ul>
+            <li class="head"><img class="richH2" src="img/richH2.png" alt="Rich Head">
+            </li><li><a href="index.html">Home</a>
+            </li><li><a href="">Sponsers</a>
+            </li><li><a href="contact.html">Contact</a>
+            </li><li class="dropdown"><a class="dropdownbtn">Twitch</a>
+                <div class="dropdown-content">
+                    <ul>
+                    <li><a href="clips.html">Clips</a>
+                    </li><li><a href="">Emotes</a>
+                    </li><li><a href="">Commands</a>
+                    </li><li><a href="">Friends</a>
+                    </li>
+                    </ul>
+                </div>
+            </li><li class="dropdown"><a class="dropdownbtn">Testing</a>
+                <div class="dropdown-content">
+                    <ul>
+                    <li><a href="404.html">Error?</a>
+                    </li><li><a href="theme-testing.html">Themes!</a>
+                    </li>
+                    </ul>
+                </div>
+            </li><li class="head"><img class="richT2" src="img/richT2.png" alt="Rich Butt">
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--add nerds vs nature link somewhere?
+    remove error testing once 404 redirect is working-->
+
+<section class="main">
+    <h1>Stuff to edit!</h1>
+    <select id="themeselector" onchange="selectedtheme">
+            <option value="dark">dark/Base Theme</option>
+            <option value="light">Light Theme</option>
+            <option value="funny">Funny Theme</option>
+    </select>
+    
+    <div id="container">
+Stuffs and things.
+
+
+    </div>
+
+</section>
+<footer class="pageend">
+    <div>
+        <p>&copy; Richard Hammer 2019<br>
+        Powered By Chat <span>&hearts;</span></p>
+        
+        <p>Made by Variandra</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
