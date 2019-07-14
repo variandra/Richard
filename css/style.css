@@ -93,6 +93,7 @@ nav ul li div.dropdown-content{
 nav li .dropdown-content li{
     background-color:rgb(243, 148, 181); 
     background-image: none;
+    border: solid black 1px;
 }
 
 nav li .dropdown-content a {
@@ -112,7 +113,12 @@ nav ul li.dropdown:hover .dropdownbtn {
     color: rgb(255, 255, 255);
 }
 
+nav ul ul{
+    flex-direction: column;
+}
 
+
+/* Main Section Under the Nav Bar */
 .flex{
     display: flex;
 }
