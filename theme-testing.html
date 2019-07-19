@@ -2,18 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="dark">
+    <link rel="alternate stylesheet" type="text/css" href="css/light.css" title="light">
     <title>
        Testing javascript
     </title>
-<script type="text/javascript">
-        function theme(newtheme){
-            document.getElementById("").style.backgroundColor = ""
-        }
-        function selectedtheme(){
-            newtheme = document.getElementById("themeselector").value;
-        }
-    
+<script type="text/javascript" src="scripts/theme.js">
+
+
+window.onload = function(e) {
+  var cookie = readCookie("style");
+  var title = cookie ? cookie : getPreferredStyleSheet();
+  setActiveStyleSheet(title);
+}
+
+window.onunload = function(e) {
+  var title = getActiveStyleSheet();
+  createCookie("style", title, 365);
+}
+
+var cookie = readCookie("style");
+var title = cookie ? cookie : getPreferredStyleSheet();
+setActiveStyleSheet(title);
+
     </script>
 </head>
 
@@ -54,7 +65,7 @@
 
 <section class="main">
     <h1>Stuff to edit!</h1>
-    <select id="themeselector" onchange="selectedtheme">
+    <select id="themeselector" onchange="selectedtheme()">
             <option value="dark">dark/Base Theme</option>
             <option value="light">Light Theme</option>
             <option value="funny">Funny Theme</option>
