@@ -11,6 +11,7 @@ function setActiveStyleSheet(title) {
       if(a.getAttribute("title") == title) a.disabled = false;
     }
   }
+  createCookie("style", title, 365)
 }
 
 function getActiveStyleSheet() {

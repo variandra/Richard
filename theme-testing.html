@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css" title="dark">
-    <link rel="alternate stylesheet" type="text/css" href="css/light.css" title="light">
-    <title>
-       Testing javascript
-    </title>
-<script type="text/javascript" src="scripts/theme.js">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style.css" title="dark">
+<link rel="alternate stylesheet" type="text/css" href="css/light.css" title="light">
 
+<script type="text/javascript" src="scripts/theme.js">
 
 window.onload = function(e) {
   var cookie = readCookie("style");
@@ -24,8 +21,11 @@ window.onunload = function(e) {
 var cookie = readCookie("style");
 var title = cookie ? cookie : getPreferredStyleSheet();
 setActiveStyleSheet(title);
+</script>
 
-    </script>
+<title>
+    Testing javascript
+</title>
 </head>
 
 <body>
@@ -65,11 +65,13 @@ setActiveStyleSheet(title);
 
 <section class="main">
     <h1>Stuff to edit!</h1>
-    <select id="themeselector" onchange="selectedtheme()">
-            <option value="dark">dark/Base Theme</option>
-            <option value="light">Light Theme</option>
-            <option value="funny">Funny Theme</option>
-    </select>
+    <form>
+        <select id="themeselector" onchange="selectedtheme()" autocomplete="off">
+                <option value="dark">dark/Base Theme</option>
+                <option value="light">Light Theme</option>
+                <option value="funny">Funny Theme</option>
+        </select>
+    </form>
     
     <div id="container">
 Stuffs and things.

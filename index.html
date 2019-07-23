@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style.css" title="dark">
+<link rel="alternate stylesheet" type="text/css" href="css/light.css" title="light">
 
-    <script type="text/javascript" src="scripts/theme.js">
+<script type="text/javascript" src="scripts/theme.js">
 
 window.onload = function(e) {
   var cookie = readCookie("style");
@@ -20,15 +21,11 @@ window.onunload = function(e) {
 var cookie = readCookie("style");
 var title = cookie ? cookie : getPreferredStyleSheet();
 setActiveStyleSheet(title);
-    
-    
-    
-    
-    </script>
+</script>
 
-    <title>
-       Richard Hammer TV
-    </title>
+<title>
+    Richard Hammer TV
+</title>
 </head>
 
 <body>

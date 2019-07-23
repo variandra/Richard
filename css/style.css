@@ -56,6 +56,7 @@ nav li.head {
 
 
 nav a {
+    display: block;
 	line-height: 56px;
     list-style: none;
     border: 0;
@@ -84,7 +85,7 @@ nav ul li div.dropdown-content{
     position: absolute;
     top: 48px;
     left: 0;
-    background-color: none;
+    background-color: unset;
     min-width: 160px;
     box-shadow: 10px 8px 16px 5px rgba(0, 0, 0, 0.5);
     z-index: 1;
@@ -92,13 +93,18 @@ nav ul li div.dropdown-content{
 
 nav li .dropdown-content li{
     background-color:rgb(243, 148, 181); 
-    background-image: none;
+    background-image: unset;
     border: solid black 1px;
+    height: unset;
 }
 
 nav li .dropdown-content a {
+    line-height: unset;
+    height: unset;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: rgb(0, 0, 0);
-    background-image: none;
+    background-image: unset;
 }
 
 nav li .dropdown-content a:hover {
