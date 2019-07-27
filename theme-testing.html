@@ -18,9 +18,6 @@ window.onunload = function(e) {
   createCookie("style", title, 365);
 }
 
-var cookie = readCookie("style");
-var title = cookie ? cookie : getPreferredStyleSheet();
-setActiveStyleSheet(title);
 </script>
 
 <title>
@@ -66,7 +63,7 @@ setActiveStyleSheet(title);
 <section class="main">
     <h1>Stuff to edit!</h1>
     <form>
-        <select id="themeselector" onchange="selectedtheme()" autocomplete="off">
+        <select id="themeselector" onchange="selectedTheme()" autocomplete="off">
                 <option value="dark">dark/Base Theme</option>
                 <option value="light">Light Theme</option>
                 <option value="funny">Funny Theme</option>
@@ -78,6 +75,16 @@ Stuffs and things.
 
 
     </div>
+<button onclick="myFunction()">check if cookie was made.</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.cookie;
+  document.getElementById("demo").innerHTML = "Cookies associated with this document: " + x;
+}
+</script>
 
 </section>
 <footer class="pageend">
@@ -87,6 +94,7 @@ Stuffs and things.
         
         <p>Made by Variandra</p>
     </div>
+    
 </footer>
 
 
