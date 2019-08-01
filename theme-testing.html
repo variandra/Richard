@@ -5,9 +5,11 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" title="dark">
 <link rel="alternate stylesheet" type="text/css" href="css/light.css" title="light">
 
-<script type="text/javascript" src="scripts/theme.js">
+<script type="text/javascript" src="scripts/theme.js"></script>
 
-window.onload = function(e) {
+<script>
+
+window.onload = function(e){
   var cookie = readCookie("style");
   var title = cookie ? cookie : getPreferredStyleSheet();
   setActiveStyleSheet(title);
@@ -75,17 +77,6 @@ Stuffs and things.
 
 
     </div>
-<button onclick="myFunction()">check if cookie was made.</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var x = document.cookie;
-  document.getElementById("demo").innerHTML = "Cookies associated with this document: " + x;
-}
-</script>
-
 </section>
 <footer class="pageend">
     <div>

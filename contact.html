@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="scripts/scripts.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="dark">
+    <link rel="alternate stylesheet" type="text/css" href="css/light.css" title="light">
+    
+    <script type="text/javascript" src="scripts/theme.js"></script>
+    
+    <script>
+    
+    window.onload = function(e){
+      var cookie = readCookie("style");
+      var title = cookie ? cookie : getPreferredStyleSheet();
+      setActiveStyleSheet(title);
+    }
+    
+    window.onunload = function(e) {
+      var title = getActiveStyleSheet();
+      createCookie("style", title, 365);
+    }
+    
+    </script>
     <title>
        Richard Hammer TV
     </title>
